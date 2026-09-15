@@ -1,0 +1,18 @@
+# WorkBuddy 本地工具数据（审计产物、记忆文件、含二进制），不纳入版本管理
+.workbuddy/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# 构建产物
+target/
+bazel-*
+*.class
