@@ -1,5 +1,38 @@
 # X For You 信息流算法
 
+## 翻译进度
+
+> 本小节为译者为本仓库中文翻译建立的索引。状态图例：✅ 已完成 · 🔄 进行中 · ⬜ 未开始。
+> 说明：本仓库中 `home-mixer/`、`candidate-pipeline/`、`botmaker/`、`botmaker-rules/` 四个目录**暂无对应的英文 `README.md` 源文件**（仅含代码），因此目前无可翻译内容；其余未开始模块亦无英文 README 源。
+
+| 模块 | 说明 | 状态 |
+| --- | --- | --- |
+| `README.md`（主文档） | 仓库总览、系统架构与组件说明 | ✅ 已完成 |
+| `phoenix/` | 召回与排序模型的训练 / 服务代码及文档 | ✅ 已完成 |
+| `bdsm/` | 识别非真实 / 滥用行为的账号序列模型 | ✅ 已完成 |
+| `home-mixer/` | 构建 For You 信息流的核心服务（无英文 README 源） | ⬜ 未开始 |
+| `candidate-pipeline/` | 推荐流水线通用框架（无英文 README 源） | ⬜ 未开始 |
+| `botmaker/` | 标注规则引擎：语言、编译器与运行时（无英文 README 源） | ⬜ 未开始 |
+| `botmaker-rules/` | `scarecrow` 加载的标注规则（无英文 README 源） | ⬜ 未开始 |
+| `thunder/` | 网内近期帖子内存缓存 | ⬜ 未开始 |
+| `simclusters/` | 基于互动聚类的网外召回 | ⬜ 未开始 |
+| `phoenix-rankall/` | Phoenix 召回帖子索引维护 | ⬜ 未开始 |
+| `phoenix-rankall-strato/` | 决定帖子归属索引的事件层 | ⬜ 未开始 |
+| `vm-ranker/` | 基于 DPP 的重排服务 | ⬜ 未开始 |
+| `grox/` | 帖子发布时的内容理解分类器 | ⬜ 未开始 |
+| `media-model-proxy/` | 图像与视频模型服务（含 `README.rst`） | ⬜ 未开始 |
+| `clip/` | 图像与文本嵌入模型训练 | ⬜ 未开始 |
+| `agatha/` | 基于他人反馈的账号标签离线批处理 | ⬜ 未开始 |
+| `user-cred-v2/` | 关注图与互动边上的 PageRank 评分 | ⬜ 未开始 |
+| `adult-content/` | 成人媒体分类器训练与校准 | ⬜ 未开始 |
+| `pnsfwmedia/` | 结合 CLIP 嵌入与账号分的成人媒体分类器 | ⬜ 未开始 |
+| `visibility-filtering/` | 决定帖子是否展示的规则系统 | ⬜ 未开始 |
+| `visibility-filtering-client/` | 访问可见性过滤的客户端 | ⬜ 未开始 |
+| `scarecrow/` | 对事件实时施加标签规则的服务 | ⬜ 未开始 |
+| `abuse-enforcement-service/` | 依据模型分值处置账号的服务 | ⬜ 未开始 |
+| `safety-label-user-agg/` | 按帖子处置结果为账号打标签 | ⬜ 未开始 |
+| `under-the-hood/` | 账号可见性标签透明报告 | ⬜ 未开始 |
+
 本仓库包含决定用户在 X 的 **For You**（为你推荐）信息流中看到哪些帖子的核心代码。它把来自关注账号的网内内容与通过基于机器学习的召回等机制发现的网外内容结合起来，依据多种输入对内容进行过滤，并使用一个 Transformer 模型对帖子排序。
 
 > **说明**：本文件是 [README.md](README.md) 的中文译本，方便中文读者阅读。如与英文原文有出入，以英文原文为准；代码路径、标识符与链接均保持原样。
